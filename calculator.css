@@ -1,0 +1,126 @@
+/* Root theme colors */
+:root {
+  --bg-color: #f0f0f0;
+  --button-color: #ffffff;
+  --operator-color: #ffd700;
+  --equal-color: #ff6666;
+  --clear-color: #ff8c00;
+  --text-color: #333;
+  --shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --button-color: #2c2c2c;
+  --operator-color: #ffa500;
+  --equal-color: #ff4d4d;
+  --clear-color: #ff6347;
+  --text-color: #fff;
+  --shadow: 2px 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.toggle-mode {
+  background-color: var(--button-color);
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-mode:hover {
+  background-color: var(--operator-color);
+  color: #000;
+}
+
+.calculator {
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 320px;
+  max-width: 90vw;
+}
+
+.display {
+  width: 100%;
+  padding: 15px;
+  font-size: 24px;
+  text-align: right;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  margin-bottom: 20px;
+  box-shadow: inset var(--shadow);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+button {
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 14px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #dcdcdc;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.operator {
+  background-color: var(--operator-color);
+  color: #000;
+}
+
+.operator:hover {
+  background-color: #ffc107;
+}
+
+.clear {
+  background-color: var(--clear-color);
+  color: #fff;
+}
+
+.clear:hover {
+  background-color: #e67300;
+}
+
+.equal {
+  background-color: var(--equal-color);
+  color: #fff;
+}
+
+.equal:hover {
+  background-color: #ff3333;
+}
